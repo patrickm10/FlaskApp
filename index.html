@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick's Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1 class="title">Welcome to Patrick's Flask App</h1>
+    <div class="auth-forms">
+        <!-- Login Form -->
+        <div class="login-form">
+            <h2>Login</h2>
+            <form method="POST" action="{{ url_for('login') }}">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="username" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Register Form -->
+        <div class="register-form">
+            <h2>Register</h2>
+            <form method="POST" action="{{ url_for('register') }}">
+                <label for="register-username">Username:</label>
+                <input type="text" id="register-username" name="Dusername" required>
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" name="Dpassword" required>
+                <label for="register-email">Email (optional):</label>
+                <input type="email" id="register-email" name="email">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Patrick's Flask App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
